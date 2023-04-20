@@ -1,0 +1,92 @@
+/* -------------  HEADER SECTION START -----------*/
+
+header {
+
+    width: 100%;
+    background-color: $bg-red;
+
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+
+
+        &__logo {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &__list {
+            display: flex;
+            width: 35%;
+            justify-content: space-between;
+
+            &--item {
+                text-transform: uppercase;
+                list-style-type: none;
+                
+                &-link {
+                    color: #fff;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: silver;
+                    }
+                }
+
+            }
+
+        }
+
+        &__menu {
+            font-size: 32px;
+            color: #fff;
+            display: none;
+        }
+
+    }
+
+}
+
+/* -------------  HEADER SECTION END -----------*/
+
+
+@media only screen and (max-width: 768px) {
+
+    header {
+
+        .nav {
+            padding: 0 20px;
+
+            &__list{
+                display: none;
+            }
+            &__menu {
+                display: block;
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+
+    header {
+
+        .nav {
+            padding: 0 20px;
+
+            &__list{
+                display: none;
+            }
+            &__menu {
+                display: block;
+            }
+        }
+    }
+
+}

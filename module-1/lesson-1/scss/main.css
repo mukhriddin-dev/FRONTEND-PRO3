@@ -1,0 +1,170 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*::after,
+*::before,
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+main .intro .wrapper .card {
+  width: 240px;
+  margin: 10px;
+  height: 400px;
+  background-color: #6ffd10;
+  -webkit-box-shadow: 0 0 10px silver;
+          box-shadow: 0 0 10px silver;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* -------------  HEADER SECTION START -----------*/
+header {
+  width: 100%;
+  background-color: #dc143c;
+}
+header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+}
+header .nav__logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+header .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .nav__list--item {
+  text-transform: uppercase;
+  list-style-type: none;
+}
+header .nav__list--item-link {
+  color: #fff;
+  text-decoration: none;
+}
+header .nav__list--item-link:hover {
+  color: silver;
+}
+header .nav__menu {
+  font-size: 32px;
+  color: #fff;
+  display: none;
+}
+
+/* -------------  HEADER SECTION END -----------*/
+@media only screen and (max-width: 768px) {
+  header .nav {
+    padding: 0 20px;
+  }
+  header .nav__list {
+    display: none;
+  }
+  header .nav__menu {
+    display: block;
+  }
+}
+@media only screen and (max-width: 375px) {
+  header .nav {
+    padding: 0 20px;
+  }
+  header .nav__list {
+    display: none;
+  }
+  header .nav__menu {
+    display: block;
+  }
+}
+/* -------------  MAIN SECTION START -----------*/
+main {
+  min-height: calc(100vh - 70px - 50px);
+}
+main .intro {
+  background-image: url(https://picsum.photos/id/521/970/780);
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 0px - 50px);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+main .intro .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+main .intro .wrapper .card-body {
+  padding: 12px;
+}
+main .intro .wrapper .box {
+  width: 240px;
+  height: 420px;
+  -webkit-box-shadow: 0 0 25px red;
+          box-shadow: 0 0 25px red;
+  margin: 50px;
+  background-color: lime;
+}
+main .text-vue {
+  font-size: 105px;
+  text-align: center;
+  padding-top: 30px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: red;
+  -webkit-text-stroke-width: 5px;
+}
+
+/* -------------  MAIN SECTION END -----------*/
+footer {
+  width: 100%;
+  background-color: #dc143c;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+
+

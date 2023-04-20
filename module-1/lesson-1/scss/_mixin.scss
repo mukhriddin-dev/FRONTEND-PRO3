@@ -1,0 +1,8 @@
+@mixin customCard($width,$height, $bshadow, $margin,$bg){
+    width: $width;
+    height: $height;
+    box-shadow: $bshadow;
+    margin: $margin;
+    background-color: $bg;
+
+}
