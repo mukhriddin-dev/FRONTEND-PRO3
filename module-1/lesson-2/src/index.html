@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Tailwind css CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Box icon CDN -->
+        <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+        <!-- Poppins Font CDN -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+        <title>lesson-2 | tailwindCss</title>
+    </head>
+
+    <body
+        class="font-popins">
+        <!-- header -->
+        <header class="bg-slate-200">
+
+            <div class="container mx-auto">
+
+                <nav class="nav flex justify-between h-[84px] items-center px-4 md:p-[0px]">
+
+                    <a href="#">
+                        <img src="./images/Logo.svg" alt="logo" class="nav-logo"/>
+                    </a>
+
+                    <ul class="list hidden md:flex justify-between w-[588px] md:w-[400px]  ">
+                        <li class="item">
+                            <a href="#" class="hover:text-green-600 duration-100">Home</a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="hover:text-green-600 duration-100">Service</a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="hover:text-green-600 duration-100">Feature</a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="hover:text-green-600 duration-100">Product</a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="hover:text-green-600 duration-100">Testimonial</a>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="hover:text-green-600 duration-100">FAQ</a>
+                        </li>
+                    </ul>
+
+                    <ul class="auth gap-x-[34px] items-center hidden md:flex">
+                        <li class="list-auth">
+                            <a href="#">Login</a>
+                        </li>
+                        <li class="auth">
+                            <button class="list-auth focus:ring-4 ring-[lime] bg-[#4CAF4F] font-sans w-[91px] h-[41px] items-center flex justify-center text-white rounded-md">
+                                <a href="#">Sign up</a>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <span class="md:hidden">
+                        <i class="bx bx-menu text-4xl"></i>
+                    </span>
+
+                </nav>
+            </div>
+        </header>
+    </body>
+
+</html>
