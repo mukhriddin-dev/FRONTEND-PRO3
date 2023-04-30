@@ -1,6 +1,6 @@
 "use strict";
 
-let a = 24
+// let a = 24
 // --- logical and && , logical or ||
 
 // 150 ball
@@ -156,5 +156,10 @@ let a = 24
 
 // return 
 
+// (function(){
 
+//     let number=112;
+//     console.log(number);
+
+// }())
 

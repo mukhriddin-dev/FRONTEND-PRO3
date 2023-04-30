@@ -13,6 +13,13 @@
 
 - SyntaxError, ReferenceError, TypeError (https://www.tutsmake.com/javascript-error-types/)
 
+- IIFE ->  Immediately Invoked Function Expression
+
+(function)
+
+
+
+
 
 
 - function declaration 
