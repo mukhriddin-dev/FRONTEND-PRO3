@@ -133,62 +133,115 @@ let obj1 = {
 
 // console.log(week[4])
 
-let arr=[];
+// let arr=[];
 
-// arr[0]="javascript";
-// arr[1]='php';
-// arr[2]='nodejs';
-// arr[0]='Vuejs';
-// arr[3]="laravel"
+// // arr[0]="javascript";
+// // arr[1]='php';
+// // arr[2]='nodejs';
+// // arr[0]='Vuejs';
+// // arr[3]="laravel"
 
-// delete arr[2]
-
-let array2=[1,2,3,4,5,6,7,8,9,10,11];
-
-arr.push('java','php','node_modules') // ohiridan  qo'shadi 
-arr.push('vuejs')
-
-arr.unshift('Angular')   // boshidan qo'shadi 
-arr.unshift('React') 
-
-arr.shift();  // boshidan o'chiradi
-arr.shift();
-
-arr.pop() // ohiridan o'chiradi
-arr.pop() 
+// // delete arr[2]
 
 
-console.log(array2)
-console.log(arr)
 
-let array3=array2.concat(arr).concat('delphi', 'c++', 'xml')  /// concat => arrayni bir-biriga ulaydi
+// arr.push('java','php','node_modules') // ohiridan  qo'shadi 
+// arr.push('vuejs')
 
-console.log(array3)
+// arr.unshift('Angular')   // boshidan qo'shadi 
+// arr.unshift('React') 
 
-// slice -> nusxa oladi arraydan .slice(index, indexgacha)
+// arr.shift();  // boshidan o'chiradi
+// arr.shift();
 
-let copyArr=array3.slice(0,5)
+// arr.pop() // ohiridan o'chiradi
+// arr.pop() 
 
-console.log(copyArr)
 
-// splice -> arraydan kesib oladi ta'sir ko'rsatadi .slice(index, n ta)
+// console.log(array2)
+// console.log(arr)
 
-console.log(array3.splice(0,10))
-console.log(array3)
+// let array3=array2.concat(arr).concat('delphi', 'c++', 'xml')  /// concat => arrayni bir-biriga ulaydi
 
-// .indexOf elementni indexni aniqlatydi.
+// console.log(array3)
 
-console.log(array3.indexOf('xml'))
+// // slice -> nusxa oladi arraydan .slice(index, indexgacha)
 
-// includes -> arrayda element bor yoki yo'qligini tekshiradi
+// let copyArr=array3.slice(0,5)
 
-console.log(array3.includes('c++'))
+// console.log(copyArr)
 
-// join() array to string , orasiga nimdur yozib beradi.
+// // splice -> arraydan kesib oladi ta'sir ko'rsatadi .slice(index, n ta)
 
-console.log(array3.join(" "))
+// console.log(array3.splice(0,10))
+// console.log(array3)
 
-console.log(array3.length)
+// // .indexOf elementni indexni aniqlatydi.
+
+// console.log(array3.indexOf('xml'))
+
+// // includes -> arrayda element bor yoki yo'qligini tekshiradi
+
+// console.log(array3.includes('c++'))
+
+// // join() array to string , orasiga nimdur yozib beradi.
+
+// console.log(array3.join(" "))
+
+// console.log(array3.length)
+
+
+
+// let str=prompt('str kiriting=')
+
+// console.log(str.toLowerCase()) /// kichik qilib yozadi 
+// console.log(str.toUpperCase()) /// katta harflarda yozib beradi
+// console.log(str.length) // uzunligi
+// console.log(str.trim().length)  trimStart , trimEnd // white space clear -> bo'sh joylarni o'chiradi
+
+// NaN -> FALSE
+
+// if(str.trim().length){
+
+//     console.log("value: ", str)
+
+// }else{
+
+//     console.log("str length: ", str.length)
+
+// }
+
+
+// let array2=[1,2,3,4,5,6,7,8,9,10,11];
+
+
+// let str="JavaScript juda zo'r dasturlash tili , javadan ham zo'r";
+
+// let newArr=array2.join('-');
+
+// console.log(newArr.split("-"))
+
+
+// console.log(str)
+
+// console.log(str.substring(0)) /// indexdan indexgacha qirqadi
+
+
+// console.log(str[0])
+
+// console.log(str.search('S'))
+
+// console.log(str.match(/nm/gi));
+
+// console.log(str.split("java"))
+
+// console.log(str.charAt(5))
+
+
+
+
+
+
 
 
 
