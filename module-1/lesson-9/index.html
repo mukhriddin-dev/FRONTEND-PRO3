@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson-9 | JavaScript</title>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+<span class="mouse">
+  <span></span>
+</span>
+
+<div class="container">
+      <div class="row p-5">
+        <div class="col-md-6">
+          <select class="form-select"  id="category">
+           <option disabled selected>select category</option>
+          </select>
+        </div>
+
+        <div class="col-md-6">
+          <h1 id="outer"></h1>
+        <input type="text" id="input" class="form-control" placeholder="product title">
+        </div>
+      </div>
+</div>
+
+<div class="container">
+
+  <div class="wrapper">
+
+    <div class="card">
+      <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg" class="img-fluid"/>
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Apple iPhone 11 Pro Max</h5>
+        <ul class="list-unstyled">
+          <li>RAM: "4GB"</li>
+          <li>ROM: "64GB, 256GB, 512GB"</li>
+          <li>Chipset: "Apple A13 Bionic (7 nm+)",</li>
+          <li>releasedDate: "2019, September 20"</li>
+        </ul>
+        <a href="#!" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+   
+
+    
+  </body>
+  <script src="./db.js"></script>
+  <script src="./script.js"></script>
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"
+  ></script>
+</html>
