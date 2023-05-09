@@ -15,7 +15,7 @@ let phones = [
         ROM: "256GB, 512GB, 1TB",
         chipset: "Qualcomm SM8550-AB Snapdragon 8 Gen 2 (4 nm)",
         releasedDate: "2023, April 21",
-        category: "Xiomi"
+        category: "xiaomi"
     },
     {
         picture: "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro-max-.jpg",
