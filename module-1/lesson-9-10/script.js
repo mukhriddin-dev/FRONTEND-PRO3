@@ -66,69 +66,95 @@
 // console.log(phones)
 
 
-// let wrapper = document.querySelector('.wrapper');
-// let optionCategory = document.querySelector('#category');
+let wrapper = document.querySelector('.wrapper');
+let optionCategory = document.querySelector('#category');
 
-// function dynamicElements(data) {
-
-//     // console.log(data)
-
-//     for (let i = 0; i < data.length; i++) {
-
-//         const div = document.createElement('div');
-//         div.setAttribute('class', 'card');
-
-//         div.innerHTML = `<div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-//                 <img src="${data[i].picture}" class="img-fluid"/>
-//                 <a href="#!">
-//                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-//                 </a>
-//                  </div>
-//                  <div class="card-body">
-//                   <h5 class="card-title">${data[i].name}</h5>
-//                     <ul class="list-unstyled">
-//                     <li>RAM: ${data[i].RAM}</li>
-//                     <li>ROM: ${data[i].ROM}</li>
-//                     <li>Chipset: ${data[i].chipset}</li>
-//                     <li>releasedDate: ${data[i].releasedDate}</li>
-//                     </ul>
-//                   <a href="#!" class="btn btn-primary">Button</a>
-//                 </div>`;
-
-//         wrapper.append(div);
-//     }
-
-// }
+function dynamicElements(data) {
 
 
-// dynamicElements(phones)
+    data.forEach((el) => {
+
+        const div = document.createElement('div');
+        div.setAttribute('class', 'card');
+
+        div.innerHTML = `<div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img src="${
+            el.picture
+        }" class="img-fluid"/>
+                <a href="#!">
+                 <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+                 </div>
+                 <div class="card-body">
+                  <h5 class="card-title">${
+            el.name
+        }</h5>
+                    <ul class="list-unstyled">
+                    <li>RAM: ${
+            el.RAM
+        }</li>
+                    <li>ROM: ${
+            el.ROM
+        }</li>
+                    <li>Chipset: ${
+            el.chipset
+        }</li>
+                    <li>releasedDate: ${
+            el.releasedDate
+        }</li>
+                    </ul>
+                  <a href="#!" class="btn btn-primary">Button</a>
+                </div>`;
+
+        wrapper.append(div);
+
+    })
 
 
-// const dynamicOptions = () => {
-//     const category = [];
-
-//     for (let i = 0; i < phones.length; i++) {
-
-//         if (! category.includes(phones[i].category)) {
-
-//             category.push(phones[i].category)
-
-//             const option = document.createElement('option');
-
-//             option.textContent = phones[i].category;
-
-//             optionCategory.append(option);
-
-//         }
-//     }
-// }
-
-// dynamicOptions()
+}
 
 
-// optionCategory.addEventListener('change', (e) => {
+dynamicElements(phones)
 
-// });
+
+const dynamicOptions = () => {
+
+    const category = [];
+
+    phones.forEach((el) => {
+        if (! category.includes(el.category)) {
+
+            category.push(el.category)
+
+            const option = document.createElement('option');
+
+            option.textContent = el.category;
+
+            optionCategory.append(option);
+
+
+        }
+    })
+
+};
+
+dynamicOptions()
+
+
+optionCategory.addEventListener('change', (e) => {
+
+    wrapper.innerHTML = "";
+
+    const filterProduct = phones.filter((el) => el.category.toLowerCase() === e.target.value.toLowerCase())
+
+    if (e.target.value === 'all') {
+        dynamicElements(phones)
+    } else {
+        dynamicElements(filterProduct)
+    }
+
+
+});
 
 
 // decloration, expression , arrow
