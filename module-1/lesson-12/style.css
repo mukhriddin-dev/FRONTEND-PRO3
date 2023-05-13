@@ -1,0 +1,25 @@
+*, *::after , *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.blue{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(8, 149, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
