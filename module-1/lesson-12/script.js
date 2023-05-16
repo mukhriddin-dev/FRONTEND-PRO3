@@ -132,3 +132,29 @@
 //         e.target.textContent = "Hide"
 //     }
 // })
+
+// localStorage ga ma'lumot qo'shadi .
+
+
+// localStorage.setItem('keyname', 'value')
+// localStorage.setItem('token', 'dqwewrtiydjsbkrdjngknwearifj328ru8324urf93')
+// localStorage.setItem('role', 'admin')
+// localStorage.setItem('role1', 'adminjon')
+
+
+// ma'lumotni olish
+
+let token = localStorage.getItem('token');
+let role = localStorage.getItem('role');
+
+// bitta donasini o'chirish
+
+localStorage.removeItem('role1')
+
+// hammasini o'chirish
+
+localStorage.clear();
+
+
+console.log(token)
+console.log(role)
