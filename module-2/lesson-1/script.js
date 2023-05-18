@@ -199,32 +199,32 @@
 // }, 1000, "ok")
 // console.log(res)
 
-function done(text) {
-    console.log(text)
-}
+// function done(text) {
+//     console.log(text)
+// }
 
 
-function firstClass(sms) {
-    console.log(sms)
-}
+// function firstClass(sms) {
+//     console.log(sms)
+// }
 
 
-// CALLBACK HELL
+// // CALLBACK HELL
 
-function callback(d, f) {
-    console.log("calling : firstClass , done")
-    setTimeout(() => {
-        f('1 very good')
-        setTimeout(() => {
-            d('2 good')
-            setTimeout(() => {
-                console.log(item)
-                setTimeout(() => {
-                    console.log("step 4")
-                }, 1000)
-            }, 1000)
-        }, 1000)
-    }, 1000)
-}
+// function callback(d, f) {
+//     console.log("calling : firstClass , done")
+//     setTimeout(() => {
+//         f('1 very good')
+//         setTimeout(() => {
+//             d('2 good')
+//             setTimeout(() => {
+//                 console.log(item)
+//                 setTimeout(() => {
+//                     console.log("step 4")
+//                 }, 1000)
+//             }, 1000)
+//         }, 1000)
+//     }, 1000)
+// }
 
-callback(done, firstClass)
+// callback(done, firstClass)

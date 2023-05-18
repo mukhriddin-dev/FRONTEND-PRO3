@@ -1,0 +1,23 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 40px;
+}
+
+.card{
+    width: 300px;
+    min-height: 450px;
+    box-shadow:  0 0 10px silver;
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+
+.card-img{
+    width: 100%;
+    transform: scale(0.6);
+}
+
+.card-body{
+    padding: 20px;
+}
