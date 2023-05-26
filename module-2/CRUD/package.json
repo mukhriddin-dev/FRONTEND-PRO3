@@ -9,6 +9,7 @@
   "author": "Mukhriddin",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "json-server": "^0.17.3"
   }
 }
