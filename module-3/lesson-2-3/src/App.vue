@@ -1,7 +1,7 @@
 <template>
   <Header />
   <main>
-    <Home />
+    <About/>
   </main>
   <Footer />
 </template>

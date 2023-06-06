@@ -8,16 +8,23 @@ export default {
       img: img,
       inputPlaceholder: "enter your text",
       inputType: "text",
-      cardToggle: true
+      cardToggle: true,
+      color:'green',
+      display:'none'
     };
   },
   methods: {
     changeType() {
       this.inputType = "password";
     },
-    onToggle(){
-      this.cardToggle=!this.cardToggle;
-    }
+    onToggle() {
+      this.cardToggle = !this.cardToggle;
+      if(this.cardToggle){
+        this.display="block"
+      }else{
+        this.display="none"
+      }
+    },
   },
 
   mounted() {},
@@ -36,9 +43,9 @@ export default {
       <button class="btn btn-warning m-2" @click="changeType">password</button>
       <button class="btn btn-primary m-2" @click="onToggle">toggle card</button>
 
-        <h1>{{cardToggle}}</h1>
+      <h1>{{ cardToggle }}</h1>
 
-      <div  :class=" `${ cardToggle ? 'd-block': 'd-none'} card p-5 shadow mx-auto w-75` ">
+      <div class="box p-5 shadow mx-auto w-75">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum eius quo iure enim
           ullam ut natus voluptatum, officiis ipsam consequuntur sequi? Recusandae
@@ -48,12 +55,17 @@ export default {
         </p>
       </div>
 
-
     </div>
   </section>
 </template>
 
 <style>
+
+.box {
+  background-color: v-bind(color);
+  display: v-bind(display);
+}
+
 #home {
   background-image: url("https://picsum.photos/id/41/1000/800");
   background-repeat: no-repeat;
