@@ -16,8 +16,7 @@
 
 2. emit
 3. props
-
-4. CRUD json web server
+4. CRUD json web server (Axios)
 5. ROUTER 
 
 

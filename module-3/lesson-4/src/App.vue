@@ -3,24 +3,12 @@
     <Header />
     <main class="main">
       <section id="main">
-        <div class="container mx-auto text-center text-2xl m-4">{{ number }}</div>
-        <button class="bg-green-600 p-3 m-3" @click="incr">incr</button>
-        <button class="bg-red-600 p-3 m-3" @click="setToggle">card toggle</button>
+        <div class="container mx-auto">
+          <Post :num="number" @sendApp="followState" />
+          <button class="bg-orange-500 p-2" @click="sendPost">SEND</button>
+          <button class="bg-red-500 p-2" @click="deletePost">DELETE</button>
+          <button class="bg-cyan-500 p-2" @click="updatedPost">UPDATE</button>
 
-        <div class="card p-6 shadow m-4 border-green-600 border border-dashed" v-show="toggle">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatem
-            eligendi earum ea quisquam a ipsum, in nulla veritatis, nihil similique
-            voluptates fuga amet optio dolores aut aspernatur ipsam. Error debitis iusto
-            hic magnam, quam dicta ipsa inventore ratione numquam temporibus quidem
-            reprehenderit dolores, eaque quae tempora neque modi! Voluptatibus optio
-            distinctio cumque atque dolore veniam voluptas ipsum eius quia deserunt rem
-            obcaecati, aut consequuntur praesentium blanditiis qui repellat illum omnis
-            earum laboriosam? Accusantium quos ipsum amet assumenda facilis qui voluptates
-            dolores accusamus doloribus, ex quidem blanditiis in reprehenderit minima nisi
-            magnam doloremque, placeat sit laborum aperiam obcaecati? Deserunt ducimus
-            beatae vero voluptatum aspernatur totam tempora aut numquam natus, magni
-          </p>
         </div>
       </section>
     </main>
@@ -30,16 +18,22 @@
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import Post from "./pages/Post.vue";
+import axios from "axios";
 
 export default {
   data() {
     return {
       number: 0,
+      posts: [],
+      load: true,
+      childState: null,
     };
   },
   components: {
     Header,
     Footer,
+    Post,
   },
 
   methods: {
@@ -49,10 +43,52 @@ export default {
     setToggle() {
       this.toggle = !this.toggle;
     },
+
+    followState(e) {
+      this.childState = e;
+    },
+
+    async getPost() {
+      try {
+        const posts = await axios.get("http://localhost:6060/posts");
+        if (posts.status == 200) {
+          console.log(posts.data);
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    },
+    sendPost() {
+
+      let postObj={
+        id: 2,
+        title: "lorem ipsum plus ",
+        description: "lorem ipsum dolor sit amet plus",
+      }
+      
+      axios.post("http://localhost:6060/posts", postObj);
+
+    },
+
+    deletePost(){
+      axios.delete(`http://localhost:6060/posts/${2}`);
+    },
+
+    updatedPost(){
+      let postObj={
+        id: 2,
+        title: "lorem lorem lorem ",
+        description: "lorem ipsum dolor sit amet minus",
+      }
+      axios.put(`http://localhost:6060/posts/${2}`, postObj )
+    }
+
   },
 
   mounted() {
-    console.log("Mounted");
+    this.getPost();
+    console.log(this.load);
+    console.log(this.posts);
   },
 
   beforeCreate() {
